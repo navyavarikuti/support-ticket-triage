@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Support Ticket Triage</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <p class="small-heading">SUPPORT OPERATIONS</p>
+
+            <h1>Support Ticket Triage</h1>
+
+            <p class="subtitle">
+                A simple tool to decide which support tickets
+                should be handled first.
+            </p>
+        </header>
+
+
+        <div class="controls">
+
+            <button id="loadExampleBtn" class="button primary-button">
+                Load Example Tickets
+            </button>
+
+        </div>
+
+
+        <div class="summary">
+
+            <div class="summary-card">
+                <span id="criticalCount">0</span>
+                <p>Critical</p>
+            </div>
+
+            <div class="summary-card">
+                <span id="highCount">0</span>
+                <p>High</p>
+            </div>
+
+            <div class="summary-card">
+                <span id="mediumCount">0</span>
+                <p>Medium</p>
+            </div>
+
+            <div class="summary-card">
+                <span id="lowCount">0</span>
+                <p>Low</p>
+            </div>
+
+        </div>
+
+
+        <section class="tickets-section">
+
+            <div class="section-top">
+
+                <div>
+                    <h2>Tickets</h2>
+
+                    <p id="ticketCount">
+                        No tickets loaded
+                    </p>
+                </div>
+
+
+                <select id="priorityFilter">
+
+                    <option value="all">
+                        All priorities
+                    </option>
+
+                    <option value="critical">
+                        Critical
+                    </option>
+
+                    <option value="high">
+                        High
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="emptyState" class="empty-state">
+
+                <h3>No tickets yet</h3>
+
+                <p>
+                    Click "Load Example Tickets" to see
+                    how the system works.
+                </p>
+
+            </div>
+
+
+            <div id="ticketList"></div>
+
+        </section>
+
+
+        <footer>
+            <p>
+                Ticket priorities are calculated using simple
+                and explainable rules.
+            </p>
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
